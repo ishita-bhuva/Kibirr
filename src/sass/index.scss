@@ -63,7 +63,7 @@
     }
     &:before {
         display: none;
-        @include media-breakpoint-down-sm {
+        @include media-breakpoint-down-md {
             height: 200px;
             top: auto;
             bottom: -50px;
