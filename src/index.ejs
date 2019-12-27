@@ -6,151 +6,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favico-k.ico">
 
-    <title>Nirav 9</title>
+    <title>Kibirr</title>
 
     <% include /src/include/styles.ejs %>
 
 </head>
 
 <body>
+    <div class="kb-content">
+        <% include /src/include/header.ejs %>
 
-    <% include /src/include/header.ejs %>
+            <main class="kb-home-main">
+                <section class="kb-banner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 offset-xl-1 col-xl-5">
+                                <div class="kb-banner-data" data-aos="fade-up" data-aos-duration="1200">
+                                    <h1>Kibirr turns Your phone in to your wallet!</h1>
+                                    <p>With our fast and safe peer to peer payment application. You can send and request money to from anyone. While making purchases all from your phone!</p>
+                                    <a href="javascript:void(0)" class="kb-btn" data-toggle="modal" data-target="#kb-modal">Sign Me Up</a>
+                                    <div class="kb-app-data">
+                                        <h4>Click to Download our App!</h4>
+                                        <div class="d-flex">
+                                            <button type="button" data-toggle="modal" data-target="#kb-modal"><img src="images/app-store.svg" alt=""></button>
+                                            <button type="button" data-toggle="modal" data-target="#kb-modal"><img src="images/play-store.svg" alt=""></button>
+                                        </div>
+                                    </div>
 
-        <main id="lms-page-index">
-            <div class="container">
-                <div class="row animated fadeInRight">
-                    <div class="col-md-12">
-                        <div class="hd-title">
-                            <h3> Animated Css Exmaple</h3>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="kb-banner-img" data-aos="fade-up" data-aos-duration="1200">
+                                    <img src="images/home-slider.svg" alt="">
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="animated-box animated bounce">
-                            <h4>bounce</h4>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales sem diam, id consequat
-                                lectus eleifend quis. Etiam in risus efficitur, vestibulum velit sit amet, finibus augue.
-                                Donec non vulputate elit. Nulla ac pretium neque.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="animated-box animated bounceInLeft">
-                            <h4>animated bounceInLeft</h4>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales sem diam, id consequat
-                                lectus eleifend quis. Etiam in risus efficitur, vestibulum velit sit amet, finibus augue.
-                                Donec non vulputate elit. Nulla ac pretium neque.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="animated-box animated flash">
-                            <h4>flash</h4>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales sem diam, id consequat
-                                lectus eleifend quis. Etiam in risus efficitur, vestibulum velit sit amet, finibus augue.
-                                Donec non vulputate elit. Nulla ac pretium neque.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="animated-box animated rubberBand">
-                            <h4>flash</h4>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales sem diam, id consequat
-                                lectus eleifend quis. Etiam in risus efficitur, vestibulum velit sit amet, finibus augue.
-                                Donec non vulputate elit. Nulla ac pretium neque.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="animated-box animated swing">
-                            <h4>swing</h4>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales sem diam, id consequat
-                                lectus eleifend quis. Etiam in risus efficitur, vestibulum velit sit amet, finibus augue.
-                                Donec non vulputate elit. Nulla ac pretium neque.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="animated-box animated tada">
-                            <h4>tada</h4>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales sem diam, id consequat
-                                lectus eleifend quis. Etiam in risus efficitur, vestibulum velit sit amet, finibus augue.
-                                Donec non vulputate elit. Nulla ac pretium neque.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row animated fadeInRight">
-                    <div class="col-md-12">
-                        <div class="hd-title">
-                            <h3>Sweet Alert Exmaple</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="sweetalert">
-                            <button class="btn btn-info hello">Click here </button>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="sweetalert">
-                            <button class="btn btn-info promises">Promises </button>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="sweetalert">
-                            <button class="btn btn-info sure">Are  you sure </button>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="sweetalert">
-                            <button class="btn btn-info delete-account">Good job </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <% include /src/include/footer.ejs %>
-
-            <% include /src/include/scripts.ejs %>
-                <script>
-
-                    $('button.hello').click(function (e) {
-                        swal("Hello world!");
-                    });
-
-                    $('button.delete-account').click(function (e) {
-                        swal("Good job!", "You clicked the button!", "success");
-                    });
-
-                    $('button.promises').click(function (e) {
-                        swal("Click on either the button or outside the modal.")
-                            .then((value) => {
-                                swal(`The returned value is: ${value}`);
-                            });
-                    });
-
-                    $('button.sure').click(function (e) {
-                        swal({
-                            title: "Are you sure?",
-                            text: "Once deleted, you will not be able to recover this imaginary file!",
-                            icon: "warning",
-                            buttons: true,
-                            dangerMode: true,
-                        })
-                            .then((willDelete) => {
-                                if (willDelete) {
-                                    swal("Poof! Your imaginary file has been deleted!", {
-                                        icon: "success",
-                                    });
-                                } else {
-                                    swal("Your imaginary file is safe!");
-                                }
-                            });
-                    });
 
 
-                </script>
+                </section>
+                <section class="kb-why">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1200">
+                                <h2 class="kb-title">Why Kibirr is necessary!</h2>
+                                <p class="kb-text">Kibirr is a fast and safe peer to peer payment application. With just a few steps, you can send and request money to/from anyone.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-9 kb-why-list">
+                                <div class="row">
+                                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-data">
+                                            <h3 class="kb-subtitle">We save you time!</h3>
+                                            <p>Kibirr is a fast and safe peer to peer payment application. With just a few steps, you can send and request money to from anyone.</p>
+                                            <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 kb-order" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-img">
+                                            <img src="images/girl-calendar.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-data">
+                                            <h3 class="kb-subtitle">We track your payments!</h3>
+                                            <p>Kibirr is a fast and safe peer to peer payment application. With just a few steps, you can send and request money to/ from anyone.</p>
+                                            <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 kb-order" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-img">
+                                            <img src="images/track-payment.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-data">
+                                            <h3 class="kb-subtitle">We turn your phone into a wallet!</h3>
+                                            <p>Kibirr is a fast and safe peer to peer payment application. With just a few steps, you can send and request money to/ from anyone.</p>
+                                            <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 kb-order" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-img">
+                                            <img src="images/phone-wallet.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-data">
+                                            <h3 class="kb-subtitle">We track your payments!</h3>
+                                            <p>Kibirr is a fast and safe peer to peer payment application. With just a few steps, you can send and request money to from anyone.</p>
+                                            <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 kb-order" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="kb-why-img">
+                                            <img src="images/tract-world.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="kb-how">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1200">
+                                <h2 class="kb-title">How easy is Kibirr.</h2>
+                                <p class="kb-text">Kibirr is a fast and safe peer to peer payment application. With just a few steps, you can send and request money to/from anyone.</p>
+                            </div>
+                        </div>
+                        <div class="kb-how-data">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1200">
+                                            <div class="kb-how-list">
+                                                <div>
+                                                    <img src="images/cloud_download.svg" alt="">
+                                                    <h3 class="kb-subtitle">Download</h3>
+                                                    <p>Download Kibirr from the Apple Store or Goole Play store.</p>
+                                                </div>
+                                                <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1200">
+                                            <div class="kb-how-list">
+                                                <div>
+                                                    <img src="images/assignment_turned.svg" alt="">
+                                                    <h3 class="kb-subtitle">Sign Up</h3>
+                                                    <p>You can sign up using your phone number or email address.</p>
+                                                </div>
+                                                <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1200">
+                                            <div class="kb-how-list">
+                                                <div>
+                                                    <img src="images/account_balance.svg" alt="">
+                                                    <h3 class="kb-subtitle">Link Account</h3>
+                                                    <p>Link your bank account, Debit and Paypal with Kibirr.</p>
+                                                </div>
+                                                <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1200">
+                                            <div class="kb-how-list">
+                                                <div>
+                                                    <img src="images/thumb_up.svg" alt="">
+                                                    <h3 class="kb-subtitle">Enjoy</h3>
+                                                    <p>Enjoy sending money across the globe.</p>
+                                                </div>
+                                                <a href="javascript:vodi(0)" data-toggle="modal" data-target="#kb-modal">Sign Me Up Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <% include /src/include/footer.ejs %>
+    </div>
+
+    <% include /src/include/scripts.ejs %>
+
+
 </body>
 
 </html>

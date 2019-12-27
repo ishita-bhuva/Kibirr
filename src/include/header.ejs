@@ -1,42 +1,35 @@
-<header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-            <img class="mb-2 lms-header-logo" src="images/logistic-logo.svg" alt="" width="150">
+<header class="kb-header">
+    <nav class="navbar navbar-expand-md p-0">
+        <a class="navbar-brand p-0" href="index.html">
+            <img src="images/header-logo.svg" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item <%= htmlWebpackPlugin.options.filename === 'index.html' ? 'active' : '' %>" >
-                <a class="nav-link" href="index.html">Home
-                    <span class="sr-only">(current)</span>
+                <li class="nav-item <%= htmlWebpackPlugin.options.filename === 'index.html' ? 'active' : '' %>">
+                    <a class="nav-link" href="index.html">Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-us.html">About us</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#kb-modal">About</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="datatable-demo.html">Datatables</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#kb-modal">Business</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="font-awesome.html">Font Awesome icon</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#kb-modal">Pricing</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="contact-us.html">Contact us</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#kb-modal">Contact</a>
+                </li>
+                <li class="nav-item kb-nav-download">
+                    <a class="nav-link" data-toggle="modal" data-target="#kb-modal">Download</a>
                 </li>
             </ul>
         </div>

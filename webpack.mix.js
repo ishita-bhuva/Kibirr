@@ -18,7 +18,9 @@ mix.combine(
         "src/vendor/dataTables/datatables.min.js",
         "src/vendor/jqueryui/jquery-ui.min.js",
         "src/vendor/sweetalert/sweetalert.min.js",
-        "src/vendor/validate/jquery.validate.min.js"
+        "src/vendor/validate/jquery.validate.min.js",
+        "src/vendor/aos/aos.js",
+        "src/js/common.js",
     ],
     "dist/js/vendor.js"
 );
@@ -29,6 +31,7 @@ mix.combine(
         "src/vendor/dataTables/datatables.min.css",
         "src/vendor/font-awesome/css/font-awesome.min.css",
         "src/vendor/jqueryui/jquery-ui.min.css",
+        "src/vendor/aos/aos.css",
         //"src/vendor/sweetalert/sweetalert.css"
     ],
     "dist/css/vendor.css"
@@ -57,26 +60,6 @@ mix.webpackConfig({
             template: "ejs-compiled-loader!./src/index.ejs",
             filename: "index.html",
             inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/about-us.ejs",
-            filename: "about-us.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/contact-us.ejs",
-            filename: "contact-us.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/datatable-demo.ejs",
-            filename: "datatable-demo.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/font-awesome.ejs",
-            filename: "font-awesome.html",
-            inject: false
         })
     ],
     devServer: {
@@ -85,6 +68,6 @@ mix.webpackConfig({
         watchContentBase: true,
         host: "0.0.0.0",
         open: true
-        //port: 8082,
+            //port: 8082,
     }
 });

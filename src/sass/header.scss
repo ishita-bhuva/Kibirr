@@ -1,5 +1,341 @@
-header {
-    .lms-header-logo {
-        margin-right: auto;
+.kb-header {
+    padding: 0 140px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    @include media-breakpoint-down-xxl {
+        padding: 0 50px 0 0;
+    }
+    @include media-breakpoint-down-lg {
+        padding: 0 30px 0 0;
+    }
+    @include media-breakpoint-down-md {
+        padding: 0 15px 0 0;
+    }
+    @include media-breakpoint-down-sm {
+        padding: 0;
+    }
+    .navbar-toggler {
+        padding: 0 15px 0 0;
+        margin: 0;
+        span {
+            background: url(../images/menu.svg) no-repeat;
+            background-size: contain;
+            background-position: center center;
+            width: 32px;
+            height: 24px;
+        }
+    }
+    .navbar-brand {
+        @include media-breakpoint-down-md {
+            margin-left: -1px;
+        }
+        img {
+            width: 270px;
+            @include media-breakpoint-down-xxl {
+                width: 230px;
+            }
+            @include media-breakpoint-down-lg {
+                width: 190px;
+            }
+            @include media-breakpoint-down-md {
+                width: 150px;
+            }
+        }
+    }
+    .navbar-collapse {
+        @include media-breakpoint-down-sm {
+            margin-top: 50px;
+            background-color: $theme-color;
+        }
+        ul {
+            align-items: center;
+            @include media-breakpoint-down-sm {
+                align-items: flex-start;
+                padding: 0 30px 20px;
+            }
+            li {
+                margin: 0 27px;
+                @include media-breakpoint-down-lg {
+                    margin: 0 18px;
+                }
+                @include media-breakpoint-down-md {
+                    margin: 0 14px;
+                }
+                @include media-breakpoint-down-sm {
+                    margin: 15px 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.active {
+                    a {
+                        font-weight: bold;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+                a {
+                    font-size: 17px;
+                    color: $white;
+                    padding: 0 !important;
+                    position: relative;
+                    @include media-breakpoint-down-md {
+                        font-size: 14px;
+                    }
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $white;
+                        opacity: 0.8;
+                    }
+                    &:after {
+                        @include kb-before-after;
+                        top: auto;
+                        background: url(../images/header-active.svg) no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                        width: 12px;
+                        margin: 0 auto;
+                        height: 7px;
+                        bottom: -40px;
+                        @include kb-transition;
+                        opacity: 0;
+                        @include media-breakpoint-down-xxl {
+                            bottom: -32px;
+                        }
+                        @include media-breakpoint-down-lg {
+                            bottom: -25px;
+                        }
+                        @include media-breakpoint-down-md {
+                            bottom: -19px;
+                        }
+                        @include media-breakpoint-down-sm {
+                            bottom: 0;
+                            top: 0;
+                            left: auto;
+                            right: -20px;
+                            margin: auto;
+                            transform: rotate(-90deg);
+                            width: 8px;
+                            height: 8px;
+                            background-color: #fff;
+                            border-radius: 50px;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kb-nav-download {
+        margin-right: 0;
+        .nav-link {
+            border-radius: 25px;
+            border: 1px solid $white;
+            min-width: 210px;
+            padding: 13px !important;
+            font-size: 19px;
+            text-align: center;
+            margin-left: 30px;
+            @include media-breakpoint-down-xxl {
+                min-width: 190px;
+                padding: 11px !important;
+                font-size: 18px;
+            }
+            @include media-breakpoint-down-lg {
+                min-width: 140px;
+                font-size: 15px;
+                margin-left: 15px;
+            }
+            @include media-breakpoint-down-md {
+                min-width: 120px;
+                font-size: 13px;
+                margin-left: 0;
+                padding: 9px !important;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.kb-footer {
+    background-color: $theme-color;
+    position: relative;
+    color: $white;
+    padding: 65px 0;
+    @include media-breakpoint-down-md {
+        padding: 25px 0;
+    }
+    &:after {
+        @include kb-before-after;
+        background: url(../images/footer-shape.svg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        bottom: auto;
+        top: -70px;
+        background-position: center top;
+        z-index: -1;
+    }
+    .kb-ft-logo {
+        img {
+            width: 60px;
+            @include media-breakpoint-down-lg {
+                width: 50px;
+            }
+        }
+    }
+    .kb-ft-menu {
+        margin: 50px 0;
+        @include media-breakpoint-down-md {
+            margin: 30px 0 0;
+        }
+        li {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.active {
+                a {
+                    font-weight: 600;
+                }
+            }
+            a {
+                font-size: 17px;
+                color: $white;
+            }
+        }
+    }
+    .kb-btn {
+        margin-top: 80px;
+        @include media-breakpoint-down-md {
+            margin-top: 0;
+        }
+    }
+    .kb-copyright {
+        font-size: 12px;
+    }
+    .kb-app-data {
+        h4 {
+            font-size: 20px;
+            margin: 45px 0 40px;
+            @include media-breakpoint-down-lg {
+                font-size: 16px;
+                margin: 25px 0 20px;
+            }
+        }
+    }
+    .kb-ft-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 80px;
+        @include media-breakpoint-down-lg {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-down-md {
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-left: 27px;
+            @include media-breakpoint-down-lg {
+                margin-left: 20px;
+            }
+            @include media-breakpoint-down-md {
+                margin-right: 20px;
+                margin-left: 0;
+                margin-top: 50px;
+            }
+            a {
+                width: 45px;
+                height: 45px;
+                background-color: $white;
+                border-radius: 50px;
+                @include media-breakpoint-down-lg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    .kb-ft-form {
+        h5 {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            max-width: 422px;
+            @include media-breakpoint-down-lg {
+                font-size: 17px;
+                line-height: 25px;
+                margin-bottom: 12px;
+                max-width: 372px;
+            }
+        }
+        p {
+            font-size: 17px;
+            margin-bottom: 20px;
+            @include media-breakpoint-down-lg {
+                font-size: 15px;
+            }
+        }
+        .form-group {
+            position: relative;
+            max-width: 536px;
+            @include media-breakpoint-down-lg {
+                max-width: 100%;
+            }
+            .form-control {
+                border-radius: 50px;
+                font-size: 16px;
+                height: auto;
+                padding: 13px 130px 13px 34px;
+                background-color: $white;
+                border: none;
+                @include media-breakpoint-down-lg {
+                    font-size: 14px;
+                }
+                @include media-breakpoint-down-sm {
+                    padding: 8px 130px 8px 20px;
+                }
+                &::-webkit-input-placeholder {
+                    color: rgba(47, 46, 65, 0.35);
+                }
+                &:-ms-input-placeholder {
+                    color: rgba(47, 46, 65, 0.35);
+                }
+                &::placeholder {
+                    color: rgba(47, 46, 65, 0.35);
+                }
+            }
+            button {
+                background-color: $theme-color;
+                color: $white;
+                font-size: 16px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-radius: 0 50px 50px 0;
+                padding: 0 21px;
+                line-height: 50px;
+                border: 1px solid $white;
+                @include media-breakpoint-down-lg {
+                    line-height: 47px;
+                    font-size: 14px;
+                }
+                @include media-breakpoint-down-sm {
+                    line-height: 37px;
+                }
+            }
+        }
     }
 }

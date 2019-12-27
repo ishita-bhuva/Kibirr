@@ -1,49 +1,259 @@
-#lms-page-index {
-    p {
-        font-size: 14px;
-        //576
-        @include media-breakpoint-up(sm) {
-            font-size: 15px;
+.kb-home-main {
+    .kb-why-data,
+    .kb-how-list {
+        p {
+            font-size: 19px;
+            line-height: 28px;
+            color: rgba(36, 36, 36, 0.8);
+            @include media-breakpoint-down-xxl {
+                font-size: 17px;
+            }
+            @include media-breakpoint-down-lg {
+                font-size: 15px;
+                line-height: 24px;
+            }
         }
-        //768
-        @include media-breakpoint-up(md) {
-            font-size: 16px;
-        }
-        //992
-        @include media-breakpoint-up(lg) {
+        a {
             font-size: 17px;
+            line-height: 20px;
+            @include media-breakpoint-down-lg {
+                font-size: 15px;
+            }
         }
-        //1200
-        @include media-breakpoint-up(xl) {
-            font-size: 18px;
-        }
-
-        // span {
-        //     background-color: $primary;
-        // }
     }
 }
 
-
-.hd-title{
-    width: 100%;
-    h3{
+.kb-banner {
+    background-color: $theme-color;
+    position: relative;
+    min-height: calc(100vh - 420px);
+    margin-bottom: 420px;
+    @include media-breakpoint-down-xl {
+        min-height: calc(100vh - 330px);
+        margin-bottom: 330px;
+    }
+    @include media-breakpoint-down-lg {
+        min-height: calc(100vh - 250px);
+        margin-bottom: 250px;
+    }
+    @include media-breakpoint-down-md {
+        min-height: calc(100vh - 530px);
+        margin-bottom: 170px;
+    }
+    @include media-breakpoint-down-sm {
+        margin-bottom: 210px;
+    }
+    &:after,
+    &:before {
+        @include kb-before-after;
+        background: url(../images/banner-shape.svg) no-repeat;
+        background-size: cover;
         width: 100%;
-        font-size: 35px;
-        padding: 25px 0px;
+        height: 100%;
+        top: 100%;
+        bottom: auto;
+        background-position: center center;
+        z-index: -1;
+        @include media-breakpoint-down-xl {
+            height: 80%;
+        }
+        @include media-breakpoint-down-lg {
+            height: 49%;
+        }
+    }
+    &:before {
+        display: none;
+        @include media-breakpoint-down-sm {
+            height: 200px;
+            top: auto;
+            bottom: -50px;
+            background-color: $theme-color;
+            display: block;
+        }
+    }
+    .container {
+        top: 200px;
+        position: relative;
+        @include media-breakpoint-down-xl {
+            top: 170px;
+        }
+        @include media-breakpoint-down-md {
+            top: 120px;
+        }
+    }
+    .col-xl-5 {
+        @include media-breakpoint-down-sm {
+            order: 2;
+        }
+    }
+    .kb-banner-img {
+        top: 100px;
+        position: relative;
+        @include media-breakpoint-down-xxl {
+            top: 60px;
+        }
+        @include media-breakpoint-down-lg {
+            top: 20px;
+        }
+        @include media-breakpoint-down-sm {
+            top: 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        img {
+            height: 500px;
+            @include media-breakpoint-down-xxl {
+                height: 450px;
+            }
+            @include media-breakpoint-down-sm {
+                height: 240px;
+            }
+        }
+    }
+    .kb-banner-data {
+        color: $white;
+        h1 {
+            font-size: 56px;
+            line-height: 62px;
+            font-weight: bold;
+            @include media-breakpoint-down-xxl {
+                font-size: 50px;
+                line-height: 57px;
+            }
+            @include media-breakpoint-down-xl {
+                font-size: 39px;
+                line-height: 46px;
+            }
+            @include media-breakpoint-down-md {
+                font-size: 33px;
+                line-height: 36px;
+            }
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            margin: 13px 0 45px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 540px;
+            @include media-breakpoint-down-xl {
+                font-size: 17px;
+                line-height: 26px;
+                margin: 13px 0 35px;
+            }
+        }
+        .kb-app-data {
+            margin-top: 60px;
+            @include media-breakpoint-down-lg {
+                margin-top: 40px;
+            }
+        }
     }
 }
 
-.animated-box{
-    width: 100%;
-    padding: 50px  30px;
-    margin: 0px 0px 40px 0px;
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
+.kb-why {
+    padding-top: 85px;
+    .kb-why-list {
+        margin-top: 150px;
+        @include media-breakpoint-down-xl {
+            margin-top: 90px;
+        }
+        .row {
+            margin-bottom: 100px;
+            @include media-breakpoint-down-lg {
+                margin-bottom: 60px;
+            }
+            &:nth-child(2n) {
+                .kb-order {
+                    order: -1;
+                    .kb-why-img {
+                        text-align: left;
+                        @include media-breakpoint-down-sm {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kb-why-data {
+        a {
+            margin-top: 15px;
+        }
+    }
+    .kb-order {
+        @include media-breakpoint-down-sm {
+            order: -1;
+            margin-bottom: 20px;
+        }
+    }
+    .kb-why-img {
+        text-align: right;
+        @include media-breakpoint-down-sm {
+            text-align: center;
+        }
+        img {
+            width: 450px;
+            @include media-breakpoint-down-xxl {
+                width: 400px;
+            }
+            @include media-breakpoint-down-xl {
+                width: 330px;
+            }
+            @include media-breakpoint-down-md {
+                width: 240px;
+            }
+            @include media-breakpoint-down-sm {
+                width: 190px;
+            }
+        }
+    }
 }
 
-.sweetalert{
-    width: 100%;
-    text-align: center;
+.kb-how {
+    margin: 150px 0 210px;
+    @include media-breakpoint-down-xl {
+        margin: 70px 0 180px;
+    }
+    @include media-breakpoint-down-lg {
+        margin: 30px 0 160px;
+    }
+    @include media-breakpoint-down-sm {
+        margin: 30px 0 110px;
+    }
+    .kb-how-data {
+        margin: 100px 0 0;
+        @include media-breakpoint-down-lg {
+            margin: 60px 0 0;
+        }
+        .kb-how-list {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include media-breakpoint-down-md {
+                margin-bottom: 40px;
+                height: calc(100% - 40px);
+            }
+            img {
+                height: 45px;
+                margin-bottom: 28px;
+                @include media-breakpoint-down-xl {
+                    height: 37px;
+                    margin-bottom: 25px;
+                }
+                @include media-breakpoint-down-lg {
+                    height: 35px;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                max-width: 330px;
+                margin: 0 auto 20px;
+                @include media-breakpoint-down-xxl {
+                    max-width: 290px;
+                }
+            }
+        }
+    }
 }
